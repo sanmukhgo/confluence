@@ -1,3 +1,3 @@
 # Confluence
 
-A web crawler for Go Wiki
+On GreyOrange Wiki
