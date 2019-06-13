@@ -13,14 +13,14 @@ m = soup.find('div',{'id':'main'})
 content = m.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
 spc = "   "   #tab space
 
-print ("TABLE OF CONTENTS:\n")
-print ((content[0].text.strip())[4:])
+print("TABLE OF CONTENTS:\n")
+print((content[0].text.strip())[4:])
 l = len(content)
 
 for i in range(1,l):
     hn1 = int(content[i].name[1])
-    print (spc*(hn1-1),end='')       #puts indentation
-    print (content[i].text.strip())  #prints content
+    print(spc*(hn1-1), end='')      #puts indentation
+    print(content[i].text.strip())  #prints content
     try:
         hn2 = int(content[i+1].name[1])
     except:
@@ -28,5 +28,3 @@ for i in range(1,l):
     else:
         if (i<l-1) and (hn1>hn2):   #puts newlines
             print()
-
-
