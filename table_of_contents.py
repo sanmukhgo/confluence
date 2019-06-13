@@ -20,14 +20,14 @@ l=len(content)
 
 for i in range(1,l):
     hn1=int(content[i].name[1])
-    print(spc*(hn1-1),end='')   #puts indentation
+    print(spc*(hn1-1),end='')       #puts indentation
     print(content[i].text.strip())  #prints content
     try:
         hn2=int(content[i+1].name[1])
     except:
         pass
     else:
-        if (i<l-1) and (hn1>hn2):    #puts newlines
+        if (i<l-1) and (hn1>hn2):   #puts newlines
             print()
 
 
