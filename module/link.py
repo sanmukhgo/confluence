@@ -16,8 +16,8 @@ def links(key='http'):
 def print_links(key='http'):
     """Prints all links which starts with key."""
 
-    l = links(key)
-    for i in l:
+    links = links(key)
+    for i in links:
         print(i)
 
 
@@ -29,7 +29,7 @@ print_links(): Prints all http links
 a_list = soup.find_all('a', href=True)
 
 """ Prints all links containing key if invoked directly."""
-if __name__ == "__main__":   
+if __name__ == "__main__":
     print("Enter key: ", end=" ")
     key = str(input())
 

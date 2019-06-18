@@ -6,10 +6,10 @@ Indents them and adds newlines based on h-index.
 """
 
 
-def headings() -> dict:
+def headings():
     """
     Returns a list of dict of all headings with their tag.
-    
+
         .tag: Tag name
         .text: Text inside tag 
     """

@@ -33,42 +33,39 @@ def data():
 
     data = []
     m = soup.find('div', {'id': 'main-content'})
-    
-    for i in m.children:
+
+    for tag in m.children:
 
         """Creates dict element with tag name and text for h-tags."""
-        if i.name in ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']:
-            data.append({'tag': i.name,
-                         'text': i.text.strip(),
+        if tag.name in ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']:
+            data.append({'tag': tag.name,
+                         'text': tag.text.strip(),
                          'ul': [],
                          'table': [],
                          'subheads': []})
 
         """Adds unordered list data."""
-        if i.name == 'ul':
-            temp = _parse_list(i)
+        if tag.name == 'ul':
+            temp = _parse_list(tag)
             data[-1]['ul'].append(temp)
 
         """Adds tabular data."""
         try:
-            lst = i.get_attribute_list('class')  # Finds table
+            lst = tag.get_attribute_list('class') # Finds table
             if 'table-wrap' in lst:
                 tbl = []
                 row = []
 
-                for j in i.find_all('th'):      # Adds table headings
-                    txt = j.text.strip()
-                    row.append(txt)
-                if row != []:
-                    tbl.append(row)
-
-                for k in i.find_all('tr'):      # Adds table rows
+                for j in tag.find_all('tr'):      # Adds table rows
                     row = []
-                    for l in k.find_all('td'):
-                        '''txt = _parse_list(l.ul)
-                        if txt == None:'''
-                        txt = l.text.strip()
-                        row.append(txt)
+
+                    for k in j.children:
+                        if k.name == "th" or k.name=="td":
+                            '''txt = _parse_list(l.ul)
+                            if txt == None:'''
+                            txt = k.text.strip()
+                            row.append(txt)  
+
                     if row != []:
                         tbl.append(row)
 
@@ -89,5 +86,6 @@ def print_data():
             print(key, " : ", value)
         print()
 
-
-print_data()
+""" Prints all data if invoked directly."""
+if __name__ == "__main__":
+    print_data()
