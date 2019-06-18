@@ -1,6 +1,6 @@
-from parser import soup
+""" Collects all hyperlinks to external pages in Inventory Features page."""
 
-""" Collects all hyperlinks to external pages in Inventory Features."""
+from reqparse import soup
 
 
 def links(key='http'):

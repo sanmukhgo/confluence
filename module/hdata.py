@@ -1,9 +1,8 @@
-from parser import soup
-
 """
-Collects all data in the Inventory Features, 
+Collects all data of Inventory Features page, 
 under their respective h-tags.
 """
+from reqparse import soup
 
 
 def _parse_list(tag):

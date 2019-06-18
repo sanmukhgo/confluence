@@ -1,9 +1,6 @@
-from parser import soup
+"""Collects all h-tags of Inventory Features page."""
 
-"""
-Collects all h-tags in Inventory Features.
-Indents them and adds newlines based on h-index.
-"""
+from reqparse import soup
 
 
 def headings():

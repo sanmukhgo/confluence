@@ -1,4 +1,4 @@
-from parser import soup
+import reqparse
 import link
 import htag
 import hdata
