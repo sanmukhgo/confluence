@@ -21,6 +21,7 @@ def parse(url, parser='html.parser', payload={}):
         html = r.text
         return bs(html, parser)
     else:
+        print(r.cookies)
         print("Login Unsuccessful")
         return None
 
