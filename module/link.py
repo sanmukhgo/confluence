@@ -16,8 +16,8 @@ def links(key='http'):
 def print_links(key='http'):
     """Prints all links which starts with key."""
 
-    links = links(key)
-    for i in links:
+    lst = links(key)
+    for i in lst:
         print(i)
 
 
