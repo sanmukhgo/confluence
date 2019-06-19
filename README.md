@@ -1,3 +1,3 @@
 # Confluence
 
-On GreyOrange Wiki
+Extract all data of Inventory Features page on GreyOrange wiki.

@@ -29,7 +29,7 @@ def print_headings():
     hn1: Index of current h-tag
     hn2: Index of next h-tag
     headings: Stores all h-tags data
-    spc: 1 tab space
+    spc: 1 tab space 
     """
 
     hlen = len(_htags)

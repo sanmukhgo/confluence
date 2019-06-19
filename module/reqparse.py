@@ -1,4 +1,4 @@
-""" Fetches and Parses the Inventory Features page into soup."""
+""" Fetches and Parses the Inventory Features page into soup. """
 
 import requests
 from bs4 import BeautifulSoup as bs
@@ -17,6 +17,7 @@ def parse(url, parser='html.parser', payload={}):
     """
 
     r = requests.post(url, data=payload)
+    
     if r.cookies:
         html = r.text
         return bs(html, parser)
@@ -26,7 +27,7 @@ def parse(url, parser='html.parser', payload={}):
         return None
 
 
-_payload = {'os_username': 'sanmukh.s',
+_payload = {'os_username': 'sanmukh.s', 
             'os_password': 'Grey@1234'}
 _url = 'https://work.greyorange.com/confluence/display/BS/40.+Inventory+Features'
 

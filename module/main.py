@@ -1,12 +1,13 @@
 import reqparse
 import link
-import htag
 import hdata
+import htag
+
 
 link.print_links()
 print()
 
-htag.print_headings()
-print()
+htag.print_headings() 
+print() 
 
 hdata.print_data()
