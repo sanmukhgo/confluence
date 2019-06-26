@@ -25,9 +25,11 @@ def data():
 
         .tag: h-Tag name
         .text: Tag heading
-        .ul: Data stored as unordered list
+        .ul: Data stored as unordered
+             list
         .table: Data stored in tables
-        .subheads: h-Tags under the current tag
+        .subheads: h-Tags under the 
+                    current tag
     """
 
     data = []
@@ -50,7 +52,7 @@ def data():
 
         """Adds tabular data."""
         try:
-            lst = tag.get_attribute_list('class') # Finds table
+            lst = tag.get_attribute_list('class')  # Finds table
             if 'table-wrap' in lst:
                 tbl = []
                 row = []
@@ -59,11 +61,11 @@ def data():
                     row = []
 
                     for k in j.children:
-                        if k.name == "th" or k.name=="td":
+                        if k.name == "th" or k.name == "td":
                             '''txt = _parse_list(l.ul)
                             if txt == None:'''
                             txt = k.text.strip()
-                            row.append(txt)  
+                            row.append(txt)
 
                     if row != []:
                         tbl.append(row)
@@ -84,6 +86,7 @@ def print_data():
         for key, value in i.items():
             print(key, " : ", value)
         print()
+
 
 """ Prints all data if invoked directly."""
 if __name__ == "__main__":
