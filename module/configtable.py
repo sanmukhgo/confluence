@@ -3,12 +3,12 @@
 import hdata
 
 
-def configurations():
+def get_configtable():
     """
     Returns combined configurations table as a dict of columns:
 
         .Source
-        .Configurtions
+        .Configurations
         .Description
         .Values
         .Default
