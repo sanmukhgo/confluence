@@ -1,11 +1,11 @@
-"""Merges all configurations tables of Inventory Features in one."""
+"""Merges all configuration tables of Inventory Features in one."""
 
 import hdata
 
 
 def configurations():
     """
-    Returns combine configurations table as a dict of columns:
+    Returns combined configurations table as a dict of columns:
 
         .Source
         .Configurtions
@@ -33,3 +33,4 @@ def configurations():
 
 if __name__ == "__main__":
     print(configurations())
+
