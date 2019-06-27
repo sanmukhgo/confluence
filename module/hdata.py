@@ -2,7 +2,7 @@
 Collects all data of Inventory Features page, 
 under their respective h-tags.
 """
-from reqparse import soup
+from parsepage import soup
 
 
 def _parse_list(tag):
