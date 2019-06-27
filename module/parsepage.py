@@ -21,10 +21,8 @@ def _parse(location: str, parser: str):
         reqpage.save_inventory()
         return _parse(location,parser)
 
-    try:
-        return bs(f.read(), parser)
-    finally:
-        f.close()
+    return bs(f.read(), parser)
+    f.close()
     
 
 
