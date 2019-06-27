@@ -22,7 +22,10 @@ def save_inventory(name: str = "inventory"):
     Saves the fetched webpage into "name".html file.
     """
 
-    page = fetch_inventory().text
+    try:
+        page = fetch_inventory().text
+    except:
+        return None
 
     f = open("page/"+name+".html", "w")
     f.write(page)
@@ -41,8 +44,10 @@ def fetch_inventory():
     return _fetch_page(url, payload)
 
 
+
 """Tells if login was successful or not, if invoked directly."""
 if __name__ == "__main__":
     if fetch_inventory():
         print("Login successful")
         save_inventory()
+
