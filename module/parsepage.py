@@ -19,11 +19,10 @@ def _parse(location: str, parser: str):
         f = open(location, "r")
     except:
         reqpage.save_inventory()
-        return _parse(location,parser)
+        return _parse(location, parser)
 
     return bs(f.read(), parser)
     f.close()
-    
 
 
 _html = "page/inventory.html"
