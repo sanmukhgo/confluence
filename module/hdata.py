@@ -64,7 +64,7 @@ def data():
                         if k.name == "th" or k.name == "td":
                             '''txt = _parse_list(l.ul)
                             if txt == None:'''
-                            txt = k.text.strip()
+                            txt = k.get_text('\n').strip()
                             row.append(txt)
 
                     if row != []:
